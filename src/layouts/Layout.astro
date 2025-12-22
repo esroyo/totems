@@ -1,5 +1,5 @@
 ---
-import '@xz/fonts/serve/inter.css';
+import '@xz/fonts/serve/merriweather.css';
 import '@exampledev/new.css/new.css';
 import { description, title } from '../common.ts';
 ---
@@ -17,3 +17,28 @@ import { description, title } from '../common.ts';
 		<slot />
 	</body>
 </html>
+<style is:global>
+:root {
+  --nc-font-serif: 'Merriweather', Georgia, serif;
+}
+html,input,select,button {
+  font-family: var(--nc-font-serif);
+  font-size: 1.2em;
+}
+
+h1 {
+	font-size: 1.45rem;
+}
+
+h2 {
+	font-size: 1.35rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+}
+
+h4 {
+	font-size: 1.15rem;
+}
+</style>
