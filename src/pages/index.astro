@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-    <h1>TÒTEMS</h1>
+    <h1 class="title"><span>_/\/\_</span> TÒTEMS <span>_/\/\_</span></h1>
     <br />
     <blockquote>
         <p>Com seria, em pregunto, viure constantment amb aquesta sensibilitat aguditzada cap a les vides que hem rebut?. Seria viure en comunitat, seria escoltar les veus dels rius, els vents, els arbres, tendir la mà a la resta d'espècies. Seria prendre, de veritat, només allò que necessitem, seria conviure en una harmonia ecològica basada en la reciprocitat i l'intercanvi de dons.</p>
@@ -33,13 +33,37 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-    .action {
-        margin: 2em 1em;
-        color: oklch(43.7% 0.078 188.216);
-        font-style: italic;
-    }
+@keyframes breathe {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
 
-    .author {
-        text-align: right;
+:root {
+    --title-color: oklch(39.1% 0.09 240.876);
+}
+
+.action {
+    margin: 2em 1em;
+    color: var(--title-color);
+    font-style: italic;
+}
+
+.author {
+    text-align: right;
+}
+
+.title {
+    color: var(--title-color);
+    font-size: 1.4rem;
+    text-align: center;
+    border: none;
+    span {
+        display: inline-block;
+        animation: breathe 9s ease-in-out infinite alternate;
     }
+}
 </style>
